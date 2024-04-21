@@ -416,7 +416,7 @@ int returnLeftMitt(int type, int baker_id, int * num_availible_left_mitts,
     fprintf(stdout, "[Cautious baker %d] has put back a left-handed mitt...\n", baker_id);
   }
 
-  // signal the other bakers waiting and definitely not complaining that there
+  // signal the other bakers waiting (and definitely not complaining) that there
   // is now a left mitt availible to the first person who can grab it
   pthread_cond_signal( left_availible );
   // unlock the lock
@@ -444,7 +444,7 @@ void bake(int type, int baker_id )
   }
 
   // put him to sleep because putting virtual cookies in an oven is very taxing
-  // on the human body
+  // on the virtual body
   random_sleep( 0.2, 0.5 );
 
   // Let the baker speak again and tell people he's done baking his cookies
