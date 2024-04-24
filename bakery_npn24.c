@@ -281,7 +281,7 @@ int getRightMitt( int type, int baker_id, int * num_availible_right_mitts,
     *num_availible_right_mitts-=1;
     ret_val = 1;
 
-    // allow the baker to tell the world that they finally got thier precious mitt
+    // allow the baker to tell the world that they finally got their precious mitt
     if( type == 2 )
     {
       fprintf(stdout, "[Right-handed baker %d] has got a right-handed mitt...\n", baker_id);
